@@ -53,7 +53,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'redis', '~> 4.0'
+ # gem 'redis', '~> 4.0'
   
 
 end
