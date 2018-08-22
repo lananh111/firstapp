@@ -281,7 +281,7 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   config.omniauth :facebook, '315796862294694', 'de679d88dcacc527b637cd0e46729bb3', scope: 'email', info_fields: 'email, name',
-   :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}
+  :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}} 
 
   config.omniauth :stripe_connect, 'ca_DLDJ85Rzqs6ILRttOagn6H2gRMVEoIjj', 'sk_test_EloRJNvhcNbbleIXJRxO3DUK
 ', scope: 'read_write', stripe_landing: 'login'
