@@ -40,7 +40,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-
+  gem 'redis', '~> 4.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
@@ -53,7 +53,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
- # gem 'redis', '~> 4.0'
+ 
   
 
 end
