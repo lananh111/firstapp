@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url:  redis://redistogo:07f26f4f9ee61cb0d6f237472f837a06@spinyfin.redistogo.com:11124/
   channel_prefix: AirPikachu_production

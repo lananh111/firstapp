@@ -42,8 +42,9 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
-
+  config.action_cable.allowed_request_origins = [ 'https://shrouded-brook-52128.heroku.com',
+  'http://shrouded-brook-52128.heroku.com' ]
+  config.web_socket_server_url = "wss://shrouded-brook-52128.heroku.com"
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
@@ -100,7 +101,7 @@ Rails.application.configure do
 
   #config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { host: 'infinite-earth-63988.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'shrouded-brook-52128.heroku.com' }
 
   config.action_mailer.delivery_method = :smtp
 
@@ -108,7 +109,7 @@ Rails.application.configure do
     address:'smtp.gmail.com',
     port:587,
     enable_starttls_auto:true,
-    domain:'infinite-earth-63988.herokuapp.com',
+    domain:'shrouded-brook-52128.heroku.com',
     authentication:'plain',
     user_name:ENV['demoairpikachu@gmail.com'],
     password:ENV['taikhoanpikachu@123']

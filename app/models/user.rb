@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, 
-         :confirmable, :omniauthable
+         :confirmable, :omniauthable; :rememberable
 
          validates :fullname, presence: true, length: {maximum: 50}
 
@@ -16,6 +16,9 @@ class User < ApplicationRecord
          has_many :guest_reviews, class_name: "GuestReview", foreign_key: "guest_id"
          has_many :host_reviews, class_name: "HostReview", foreign_key: "host_id"
 
+   def remember_me
+      true
+    end
   def self.from_omniauth(auth)
     user = User.where(email: auth.info.email).first
 
